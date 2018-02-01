@@ -8,6 +8,7 @@ view: vmsxx_02236_cda_0010 {
         , u.DATE_BEG_source 'Activity Date'
         , p.FULL_NAME
         , e.NAME As 'Event'
+        , s.notes as 'Custodian'
       --Select distinct convert(Date, date_beg_source)
       From cda.CDA_RESULTS cr
         Inner Join cda.CDA c
@@ -20,6 +21,8 @@ view: vmsxx_02236_cda_0010 {
           ON e.EVT_ID = u.EVT_ID
         Inner Join dim.PPL p
           ON p.PPL_ID = u.PPL_ID
+        Inner Join dim.src s
+          on u.src_id = s.src_id
       Where cr.CDA_ID = 11
        ;;
   }
@@ -74,6 +77,12 @@ view: vmsxx_02236_cda_0010 {
     type: string
     sql: ${TABLE}.Event ;;
   }
+
+  dimension : custodian {
+    type:  string
+    sql:  ${TABLE}.Custodian ;;
+  }
+
 
   set: detail {
     fields: [
