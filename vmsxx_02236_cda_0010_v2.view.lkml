@@ -1,4 +1,4 @@
-view: vmsxx_02236_cda_0010 {
+view: vmsxx_02236_cda_0010_v2 {
   derived_table: {
     sql: Select c.DESCRIPTION 'CDA Name'
         , cr.RESULTS_NUM_VALUE 'Risk Level'

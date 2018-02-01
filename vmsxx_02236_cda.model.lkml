@@ -19,8 +19,8 @@ explore: primary_audit {}
 
 explore: relationship {}
 
-explore: vmsxx_02236_cda_0010 {
-  from: vmsxx_02236_cda_0010
+explore: vmsxx_02236_cda_0010_v2 {
+  from: vmsxx_02236_cda_0010_v2
 }
 
 explore: script {
