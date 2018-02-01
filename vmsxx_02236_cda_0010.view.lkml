@@ -23,7 +23,7 @@ view: vmsxx_02236_cda_0010 {
           ON p.PPL_ID = u.PPL_ID
         Inner Join dim.src s
           on u.src_id = s.src_id
-      Where cr.CDA_ID = 11
+      Where cr.CDA_ID = 10
        ;;
   }
 
