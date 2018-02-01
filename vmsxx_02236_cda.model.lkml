@@ -67,6 +67,11 @@ explore: cda_results {
     sql_on: ${cda_results.evt_id} = ${evt.evt_id} ;;
     relationship: one_to_many
   }
+  join: src{
+    type: left_outer
+    sql_on: ${udf.src_id} = ${src.src_id} ;;
+    relationship: one_to_many
+  }
   join: ppl_attribute{
     from: attribute
     type: left_outer
