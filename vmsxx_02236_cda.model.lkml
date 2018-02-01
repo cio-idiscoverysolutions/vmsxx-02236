@@ -19,6 +19,10 @@ explore: primary_audit {}
 
 explore: relationship {}
 
+explore: vmsxx_02236_cda_0010 {
+  from: vmsxx_02236_cda_0010
+}
+
 explore: script {
   join: users {
     type: left_outer
