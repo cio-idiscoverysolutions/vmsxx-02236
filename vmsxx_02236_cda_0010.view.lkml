@@ -9,6 +9,7 @@ view: vmsxx_02236_cda_0010 {
         , p.FULL_NAME
         , e.NAME As 'Event'
         , s.notes as 'Custodian'
+        , o.notes as 'URL'
       --Select distinct convert(Date, date_beg_source)
       From cda.CDA_RESULTS cr
         Inner Join cda.CDA c
@@ -81,6 +82,11 @@ view: vmsxx_02236_cda_0010 {
   dimension : custodian {
     type:  string
     sql:  ${TABLE}.Custodian ;;
+  }
+
+  dimension : url {
+    type:  string
+    sql:  ${TABLE}.url ;;
   }
 
 
