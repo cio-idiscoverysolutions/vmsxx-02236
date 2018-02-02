@@ -20,6 +20,17 @@ view: i_ds_day_in_life {
     sql: ${TABLE}.date_beg_source ;;
   }
 
+  measure: most_recent_date {
+    type: date
+    sql: MAX(${date_beg_source_time})
+  }
+
+  measure: earliest_date {
+    type: date
+    sql: MIN(${date_beg_source_time})
+  }
+
+
   dimension: evt_type {
     type: string
     sql: ${TABLE}.evt_type ;;
