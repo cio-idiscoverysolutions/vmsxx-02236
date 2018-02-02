@@ -26,6 +26,22 @@ view: vmsxx_02236_cda_0010_v2 {
         Inner Join dim.src s
           on u.src_id = s.src_id
       Where cr.CDA_ID = 10
+      and substring(o.notes, charindex('//', o.notes), charindex('/', o.notes, charindex('//', o.notes)+2) - charindex('//', o.notes)) not in
+        (
+        '//107-coj-713.mktoresp.com'
+        , '//bam.nr-data.net'
+        , '//ml314.com'
+        , '//www.facebook.com'
+        , '//8166291.fls.doubleclick.net'
+        , '//dc.ads.linkedin.com'
+        , '//googleads.g.doubleclick.net'
+        , '//px.ads.linkedin.com'
+        , '//sp.analytics.yahoo.com'
+        , '//us-east-1.dc.ads.linkedin.com'
+        , '//www.bizographics.com'
+        , '//www.facebook.com'
+        , '//www.google.com'
+        )
        ;;
   }
 
