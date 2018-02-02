@@ -23,6 +23,10 @@ explore: vmsxx_02236_cda_0010_v2 {
   from: vmsxx_02236_cda_0010_v2
 }
 
+explore: i_ds_day_in_life {
+  from: i_ds_day_in_life
+}
+
 explore: script {
   join: users {
     type: left_outer
