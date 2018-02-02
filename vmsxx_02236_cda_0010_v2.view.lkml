@@ -98,6 +98,7 @@ view: vmsxx_02236_cda_0010_v2 {
 
   dimension : custodian {
     type:  string
+    full_suggestions: yes
     sql:  ${TABLE}.Custodian ;;
   }
 
