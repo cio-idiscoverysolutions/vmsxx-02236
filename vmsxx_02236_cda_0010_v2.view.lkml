@@ -10,6 +10,7 @@ view: vmsxx_02236_cda_0010_v2 {
         , e.NAME As 'Event'
         , s.notes as 'Custodian'
         , o.notes as 'URL'
+        , substring(o.notes, charindex('//', o.notes), charindex('/', o.notes, charindex('//', o.notes)+2) - charindex('//', o.notes)) as domain
       --Select distinct convert(Date, date_beg_source)
       From cda.CDA_RESULTS cr
         Inner Join cda.CDA c
@@ -89,6 +90,10 @@ view: vmsxx_02236_cda_0010_v2 {
     sql:  ${TABLE}.url ;;
   }
 
+  dimension : domain {
+    type:  string
+    sql:  ${TABLE}.domain ;;
+  }
 
   set: detail {
     fields: [
