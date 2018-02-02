@@ -21,12 +21,12 @@ view: i_ds_day_in_life {
   }
 
   measure: most_recent_date {
-    type: date
+    type: time
     sql: MAX(${date_beg_source_time});;
   }
 
   measure: earliest_date {
-    type: date
+    type: time
     sql: MIN(${date_beg_source_time});;
   }
 
