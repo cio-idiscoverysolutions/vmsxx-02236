@@ -36,6 +36,11 @@ view: i_ds_day_in_life {
     sql: ${TABLE}.evt_type ;;
   }
 
+  dimension: evt_group {
+    type: string
+    sql: ${TABLE}.evt_group ;;
+  }
+
   dimension: file_of_interest_ind {
     type: number
     sql: ${TABLE}.file_of_interest_ind ;;
