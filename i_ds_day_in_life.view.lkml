@@ -31,7 +31,7 @@ view: i_ds_day_in_life {
   }
 
   dimension: evt_num  {
-    type:  number
+    type:  string
     sql: ${TABLE}.evt_num ;;
   }
 
