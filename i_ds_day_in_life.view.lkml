@@ -30,6 +30,10 @@ view: i_ds_day_in_life {
     sql: MIN(${date_beg_source_time});;
   }
 
+  measure: evt_num  {
+    type:  number
+    sql: ${TABLE}.evt_num ;;
+  }
 
   dimension: evt_type {
     type: string
