@@ -70,6 +70,12 @@ view: i_ds_day_in_life {
     sql: ${TABLE}.UDF_ID ;;
   }
 
+  dimension: file_extension {
+    type:  string
+    sql: ${TABLE}.file_extension ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
